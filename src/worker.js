@@ -1,8 +1,7 @@
-// 3) Create src/worker.js
-// - Serves static files from /site via "Assets"
+// src/worker.js
 export default {
   async fetch(request, env, ctx) {
-    const url = new URL(request.url);
+    // Serve files from /site (configured in wrangler.toml via `assets = { directory = "./site" }`)
     return env.ASSETS.fetch(request);
   },
 };
