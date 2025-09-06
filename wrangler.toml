@@ -1,0 +1,12 @@
+name = "plyml-site"
+main = "src/worker.js"
+compatibility_date = "2025-09-06"
+
+assets = { directory = "./site" }
+
+account_id = "c86decd3dc67b5d32558bc8283949d5c"
+# Serve both apex and www through this Worker:
+routes = [
+  { pattern = "plyml.com/*", zone_name = "plyml.com" },
+  { pattern = "www.plyml.com/*", zone_name = "plyml.com" }
+]
