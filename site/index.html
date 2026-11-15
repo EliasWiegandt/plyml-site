@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="plyml — a small site in progress." />
+  <meta name="description" content="Ply builds useful things with data and machine learning. Home of Sporty." />
   <meta name="color-scheme" content="light dark" />
-  <title>plyml</title>
+  <title>Ply</title>
   <style>
     :root {
       --bg: #f6f7fb;
@@ -30,7 +30,6 @@
       }
     }
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
       min-height: 100vh;
@@ -45,61 +44,76 @@
     }
     .card {
       width: 100%;
-      max-width: 560px;
+      max-width: 600px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
       box-shadow: var(--shadow);
-      padding: clamp(1.25rem, 4vw, 2.25rem);
-    }
-    .badge {
-      display: inline-block;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .02em;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: .25rem .6rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
     }
     h1 {
       margin: 0 0 .5rem;
-      font-size: clamp(2rem, 6vw, 2.5rem);
-      letter-spacing: -.02em;
-      line-height: 1.1;
+      font-size: clamp(2.25rem, 7vw, 3rem);
+      letter-spacing: -.03em;
+      line-height: 1.05;
     }
-    .lead { margin: 0 0 1.5rem; color: var(--muted); }
-    ul.links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
-    ul.links li { border-bottom: 1px solid var(--border); }
-    ul.links a, ul.links span {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: .9rem .25rem;
+    .tagline { margin: 0 0 1rem; font-size: 1.15rem; color: var(--text); }
+    .about { margin: 0 0 2rem; color: var(--muted); }
+    h2 {
+      margin: 0 0 .75rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .project {
+      display: block;
+      text-decoration: none;
       color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color .15s, transform .15s;
     }
-    ul.links a { text-decoration: none; transition: color .15s, padding-left .15s; }
-    ul.links a:hover, ul.links a:focus-visible { color: var(--accent); padding-left: .5rem; outline: none; }
-    ul.links .label { font-weight: 600; }
-    ul.links .hint { color: var(--muted); font-size: .9rem; }
-    ul.links .arrow { color: var(--accent); }
-    .footer { margin-top: 1.5rem; font-size: .85rem; color: var(--muted); }
+    .project:hover, .project:focus-visible { border-color: var(--accent); transform: translateY(-1px); outline: none; }
+    .project-name { font-weight: 700; font-size: 1.1rem; }
+    .project-desc { margin: .25rem 0 0; color: var(--muted); }
+    .project-link { display: inline-block; margin-top: .5rem; color: var(--accent); font-size: .9rem; font-weight: 600; }
+    .placeholder {
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      color: var(--muted);
+      font-size: .95rem;
+      margin: .75rem 0 0;
+    }
+    .contact { margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .contact a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
     @media (max-width: 480px) {
-      body { place-items: start center; padding-top: 2rem; }
+      body { place-items: start center; padding-top: 1.5rem; }
     }
   </style>
 </head>
 <body>
   <main class="card">
-    <span class="badge">Work in progress</span>
-    <h1>plyml</h1>
-    <p class="lead">Hello 👋 — I’m still building this. Check back soon.</p>
-    <ul class="links">
-      <li><span><span class="label">Sporty</span><span class="hint">coming soon</span></span></li>
-      <li><a href="mailto:eliaslaurawiegandt@gmail.com"><span class="label">Contact</span><span class="arrow">eliaslaurawiegandt@gmail.com →</span></a></li>
-    </ul>
+    <h1>Ply</h1>
+    <p class="tagline">We build useful things with data and machine learning.</p>
+    <p class="about">Ply, short for Ply Machine Learning, started out helping research groups with machine-learning work. Today we focus on building our own projects.</p>
+
+    <h2>Projects</h2>
+    <a class="project" href="https://sporty.plyml.com">
+      <div class="project-name">Sporty</div>
+      <p class="project-desc">Discover sports that fit your body, preferences, and goals.</p>
+      <span class="project-link">sporty.plyml.com →</span>
+    </a>
+    <p class="placeholder">More projects coming soon.</p>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <a href="mailto:eliaslaurawiegandt@gmail.com">eliaslaurawiegandt@gmail.com</a>
+    </div>
   </main>
 </body>
 </html>
