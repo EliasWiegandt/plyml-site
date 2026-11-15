@@ -2,7 +2,7 @@ name = "plyml-site"
 main = "src/worker.js"
 compatibility_date = "2025-09-06"
 
-assets = { directory = "./site" }
+assets = { directory = "./site", binding = "ASSETS" }
 workers_dev = true
 
 account_id = "3163c47e268d21d781c4fd86a71964cb"
